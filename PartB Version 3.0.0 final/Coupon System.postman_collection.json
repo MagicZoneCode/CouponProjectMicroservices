@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "f2831467-7ebb-45d9-a861-94ed0378f676",
+		"name": "Coupon System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9398481"
+	},
+	"item": [
+		{
+			"name": "AuthForge",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"shaked\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:1337/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"shaked\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerConnect",
+			"item": [
+				{
+					"name": "http://localhost:8081/customers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTU1OTIsImV4cCI6MTcwMjY1OTE5Mn0.TTNG8RLbw51hO7TrMtM2_DSBT1ZJ3ABEy3AGl-TV-TY-Cgrc3I8RZJ-kG1AzoqxrgsB3Ke6-WVRe-zRczgE9ug",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"shaked\",\r\n    \"lastName\": \"benratzon\",\r\n    \"email\": \"shaked@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/customers",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiOTQxMWUxMDQtYmIwNC00MmE5LWFmZTUtNDg2ZTM1YjQzZGRkIiwidXNlcm5hbWUiOiJOaWtvbGF5Iiwic3ViIjoiTmlrb2xheSIsImlhdCI6MTcwMTI4Njc0MSwiZXhwIjoxNzAxMjkwMzQxfQ.vmoVtcaoXlzNvujUzUdzLM0th3-w_RJdGLi6pwh_nj2k2T_LU50XDYw3RvIzCen4UtBcjYlVlLuUG8CBblmorg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/customers/details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDE2MzYxMzYsImV4cCI6MTcwMTYzOTczNn0.PJkOu5-ngvkGWY6YtPEhc357VnV3mpDUZIzr_EOngdxgafv8yjPPo-lD3CsbxB9JUyhExv0OHNVC8P81w4SWQw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/customers/details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/customers?firstName=shakedkokoriko&lastName=banana",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTM1NjEsImV4cCI6MTcwMjY1NzE2MX0.t9KQqVl7t-qNdWjL3iixbPZULRZ2AQDHnwMpH_zo9FowL9PGBhW6NFEUosH_hIJYtcxdJz-6GHZO9plvuaWtNw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/customers?firstName=shakedkokoriko&lastName=banana",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "shakedkokoriko"
+								},
+								{
+									"key": "lastName",
+									"value": "banana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/customers",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTM1NjEsImV4cCI6MTcwMjY1NzE2MX0.t9KQqVl7t-qNdWjL3iixbPZULRZ2AQDHnwMpH_zo9FowL9PGBhW6NFEUosH_hIJYtcxdJz-6GHZO9plvuaWtNw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CouponHub",
+			"item": [
+				{
+					"name": "http://localhost:8080/coupons/b5173c25-26b7-40d6-b9ac-8421623d72ff",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiOTQxMWUxMDQtYmIwNC00MmE5LWFmZTUtNDg2ZTM1YjQzZGRkIiwidXNlcm5hbWUiOiJOaWtvbGF5Iiwic3ViIjoiTmlrb2xheSIsImlhdCI6MTcwMTI4Mzk2OCwiZXhwIjoxNzAxMjg3NTY4fQ.pBrGCL9YfUrJRxe5eS-j0MWPJ2HQVzjIPPHsRI1MEZEAszwJgL83pyIMzWdlppD9px2eW9jjLXF6xdcgEn3gAw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/coupons/b5173c25-26b7-40d6-b9ac-8421623d72ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"b5173c25-26b7-40d6-b9ac-8421623d72ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/coupons/company/a682b4e7-b267-4628-9059-9721d3f7593f",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiOTQxMWUxMDQtYmIwNC00MmE5LWFmZTUtNDg2ZTM1YjQzZGRkIiwidXNlcm5hbWUiOiJOaWtvbGF5Iiwic3ViIjoiTmlrb2xheSIsImlhdCI6MTcwMTI4Mzk2OCwiZXhwIjoxNzAxMjg3NTY4fQ.pBrGCL9YfUrJRxe5eS-j0MWPJ2HQVzjIPPHsRI1MEZEAszwJgL83pyIMzWdlppD9px2eW9jjLXF6xdcgEn3gAw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/coupons/company/a682b4e7-b267-4628-9059-9721d3f7593f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"company",
+								"a682b4e7-b267-4628-9059-9721d3f7593f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/coupons/purchase/d5173c27-26b7-40d6-b9ac-8421623d72bb",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTM1NjEsImV4cCI6MTcwMjY1NzE2MX0.t9KQqVl7t-qNdWjL3iixbPZULRZ2AQDHnwMpH_zo9FowL9PGBhW6NFEUosH_hIJYtcxdJz-6GHZO9plvuaWtNw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/coupons/purchase/d5173c27-26b7-40d6-b9ac-8421623d72bb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"purchase",
+								"d5173c27-26b7-40d6-b9ac-8421623d72bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/coupons/customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiOTQxMWUxMDQtYmIwNC00MmE5LWFmZTUtNDg2ZTM1YjQzZGRkIiwidXNlcm5hbWUiOiJOaWtvbGF5Iiwic3ViIjoiTmlrb2xheSIsImlhdCI6MTcwMTI4Njc0MSwiZXhwIjoxNzAxMjkwMzQxfQ.vmoVtcaoXlzNvujUzUdzLM0th3-w_RJdGLi6pwh_nj2k2T_LU50XDYw3RvIzCen4UtBcjYlVlLuUG8CBblmorg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/coupons/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/coupons/company/a682b4e7-b267-4628-9059-9721d3f7593f",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDE1NDgxOTQsImV4cCI6MTcwMTU1MTc5NH0.yBrALXtUiu6IavmeOZiSAIEU98FXcW7q1nDTgunBBoz39IJN7HIlWdN-0bcQrvYKXHd-LVRtELo-AK1XNOSp2Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/coupons/company/a682b4e7-b267-4628-9059-9721d3f7593f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"company",
+								"a682b4e7-b267-4628-9059-9721d3f7593f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "http://localhost:9090/authentication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"maria\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/authentication",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"authentication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/new-customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDE1NDgxOTQsImV4cCI6MTcwMTU1MTc5NH0.yBrALXtUiu6IavmeOZiSAIEU98FXcW7q1nDTgunBBoz39IJN7HIlWdN-0bcQrvYKXHd-LVRtELo-AK1XNOSp2Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"shaked\",\r\n    \"lastName\": \"benratzon\",\r\n    \"email\": \"shaked@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/new-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"new-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/new-customer?firstName=shaked1&lastName=benratzon1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDE1NDgxOTQsImV4cCI6MTcwMTU1MTc5NH0.yBrALXtUiu6IavmeOZiSAIEU98FXcW7q1nDTgunBBoz39IJN7HIlWdN-0bcQrvYKXHd-LVRtELo-AK1XNOSp2Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/update-customer?firstName=shaked1&lastName=benratzon1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"update-customer"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "shaked1"
+								},
+								{
+									"key": "lastName",
+									"value": "benratzon1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/all-company-coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTUzNjcsImV4cCI6MTcwMjY1ODk2N30.FRajAHZF8T-a3SdoTs4twUW1TS7KZOJ6CA8c-y11l1XqT_cIkU6cvnV0WQi-4k-MsYuI8bafqnKt4dMGqVq00w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/all-company-coupons/a682b4e7-b267-4628-9059-9721d3f7593f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"all-company-coupons",
+								"a682b4e7-b267-4628-9059-9721d3f7593f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/all-customer-coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTU1OTIsImV4cCI6MTcwMjY1OTE5Mn0.TTNG8RLbw51hO7TrMtM2_DSBT1ZJ3ABEy3AGl-TV-TY-Cgrc3I8RZJ-kG1AzoqxrgsB3Ke6-WVRe-zRczgE9ug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/all-customer-coupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"all-customer-coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/buy/b5173c25-26b7-40d6-b9ac-8421623d72ff",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTU1OTIsImV4cCI6MTcwMjY1OTE5Mn0.TTNG8RLbw51hO7TrMtM2_DSBT1ZJ3ABEy3AGl-TV-TY-Cgrc3I8RZJ-kG1AzoqxrgsB3Ke6-WVRe-zRczgE9ug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/buy/b5173c25-26b7-40d6-b9ac-8421623d72ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"buy",
+								"b5173c25-26b7-40d6-b9ac-8421623d72ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/get-coupon/b5173c25-26b7-40d6-b9ac-8421623d72ff",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1dWlkIjoiNDYzMTEyZDgtZGZlYS00ZjkxLWEwZTgtM2RiYmIzYTY2NTJkIiwidXNlcm5hbWUiOiJzaGFrZWQiLCJzdWIiOiJzaGFrZWQiLCJpYXQiOjE3MDI2NTU1OTIsImV4cCI6MTcwMjY1OTE5Mn0.TTNG8RLbw51hO7TrMtM2_DSBT1ZJ3ABEy3AGl-TV-TY-Cgrc3I8RZJ-kG1AzoqxrgsB3Ke6-WVRe-zRczgE9ug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/get-coupon/b5173c25-26b7-40d6-b9ac-8421623d72ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"get-coupon",
+								"b5173c25-26b7-40d6-b9ac-8421623d72ff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
